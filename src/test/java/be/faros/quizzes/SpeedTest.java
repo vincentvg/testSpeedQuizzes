@@ -39,32 +39,32 @@ public class SpeedTest {
 
 	@Before
 	public void fill() throws IncorrectValueException, ObjectAlreadyFoundException {
-//		try {
-//		createParentNodes();
-//		for(int i = 0; i<100; i++){
-//			
-//			User user = new User("vin" +i, "vifdsn", "vinded", new Date(), "fdsfdsfdsf", "fdfdsf@fdsf.fds", new Date());
-//			user = userRepo.create(user);
-//			Quiz quiz = new Quiz("abc" + i, "description","{\"Quiz\":{\"type\":\"Interactive\",\"minPlayers\":\"1\",\"maxPlayers\":\"4\"}}",user,new Date(),true);
-//			quiz = quizRepo.create(quiz);
-//			
-//			Question q1 = new Question("{\"QuizQuestion\":{\"answer\":{\"text\":\"duh\"},\"question\":\"is vincent een vrouw?"+i+"\"}}", "ans", 18);
-//			Question q2 = new Question("{\"QuizQuestion\":{\"answer\":{\"text\":\"duh\"},\"question\":\"is koen homo?"+i+"\"}}", "ans", 18);
-//			Question q3 = new Question("{\"QuizQuestion\":{\"answer\":{\"text\":\"duh\"},\"question\":\"is robin homo?"+i+"\"}}", "ans", 18);
-//			questionRepo.addQuestion(quiz.getId(), q1);
-//			questionRepo.addQuestion(quiz.getId(), q2);
-//			questionRepo.addQuestion(quiz.getId(), q3);
-//		}
-//		} catch (IncorrectValueException e) {
-//			e.printStackTrace();
-//		} catch (ObjectAlreadyFoundException e) {
-//			e.printStackTrace();
-//		} catch (QuizException e) {
-//			e.printStackTrace();
-//		} catch (ObjectNotFoundException e) {
-//			e.printStackTrace();
-//		}
-//		
+		try {
+		createParentNodes();
+		for(int i = 0; i<100; i++){
+			
+			User user = new User("vin" +i, "vifdsn", "vinded", new Date(), "fdsfdsfdsf", "fdfdsf@fdsf.fds", new Date());
+			user = userRepo.create(user);
+			Quiz quiz = new Quiz("abc" + i, "description","{\"Quiz\":{\"type\":\"Interactive\",\"minPlayers\":\"1\",\"maxPlayers\":\"4\"}}",user,new Date(),true);
+			quiz = quizRepo.create(quiz);
+			
+			Question q1 = new Question("{\"QuizQuestion\":{\"answer\":{\"text\":\"duh\"},\"question\":\"is vincent een vrouw?"+i+"\"}}", "ans", 18);
+			Question q2 = new Question("{\"QuizQuestion\":{\"answer\":{\"text\":\"duh\"},\"question\":\"is koen homo?"+i+"\"}}", "ans", 18);
+			Question q3 = new Question("{\"QuizQuestion\":{\"answer\":{\"text\":\"duh\"},\"question\":\"is robin homo?"+i+"\"}}", "ans", 18);
+			questionRepo.addQuestion(quiz.getId(), q1);
+			questionRepo.addQuestion(quiz.getId(), q2);
+			questionRepo.addQuestion(quiz.getId(), q3);
+		}
+		} catch (IncorrectValueException e) {
+			e.printStackTrace();
+		} catch (ObjectAlreadyFoundException e) {
+			e.printStackTrace();
+		} catch (QuizException e) {
+			e.printStackTrace();
+		} catch (ObjectNotFoundException e) {
+			e.printStackTrace();
+		}
+		
 
 		User user = new User("vin" , "vifdsn", "vinded", new Date(), "fdsfdsfdsf", "fdfdsf@fdsf.fds", new Date());
 		user = userRepo.create(user);
@@ -75,7 +75,7 @@ public class SpeedTest {
 	@Test
 	public void testFindAllQuizzes(){
 		
-		//quizRepo.findAllQuizzes();
+		quizRepo.findAllQuizzes();
 		
 	}
 	

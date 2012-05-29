@@ -37,8 +37,12 @@ public class SpeedTest {
 	@Autowired
 	private Neo4jTemplate template;
 
+	
+	/**
+	 * Fills database with NodeEntities when they don't exist.
+	 */
 	@Before
-	public void fill() throws IncorrectValueException, ObjectAlreadyFoundException {
+	public void fill() {
 		try {
 		createParentNodes();
 		for(int i = 0; i<100; i++){
@@ -66,8 +70,6 @@ public class SpeedTest {
 		}
 		
 
-		User user = new User("vin" , "vifdsn", "vinded", new Date(), "fdsfdsfdsf", "fdfdsf@fdsf.fds", new Date());
-		user = userRepo.create(user);
 	}
 	
 	
